@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h6></h6>
+    <input type="number" id="niu" />
+    <button onclick="my_function()">button</button>
+    <p id="show"></p>
+    <script>
+      let notas = [
+        [1001234, 4],
+        [1002345, 5],
+        [1003456, 6],
+      ];
+
+      let niu = 1002345;
+
+      let notas2 = [];
+      notas2[1001234] = 4;
+      let matriz = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+      ];
+
+      function my_function() {
+        const my_niu = document.getElementById("niu").value;
+        // const get_field = notas.filter( ele => ele[0] == my_niu  )
+        let my_num;
+        for (x in notas) {
+          // notas[x] == my_niu;
+          if (my_niu == notas[x][0]) {
+            my_num = notas[x][1];
+            console.log( typeof my_niu)
+            console.log( typeof notas[x][0])
+        }
+        }
+        // document.getElementById("show").innerHTML = get_field[0][1];
+        document.getElementById("show").innerHTML = my_num;
+      }
+    </script>
+  </body>
+</html>
